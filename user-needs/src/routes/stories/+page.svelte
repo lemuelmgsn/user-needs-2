@@ -81,17 +81,21 @@ ul:nth-of-type(1) > li{
 header{
     position: relative;
     z-index: 10;
+    width: 100%;
+    height: 10vh;
+    background-color: white;
 }
 main{
     /* background-color: purple; */
     /* pas aan per scherm grootte */
-    height: 200vh;
+    height: auto;
+    transform: translateY(15vh);
 }
 
 section{
-    width: 80vw;
+    width: 90vw;
     margin: 0 auto;
-    /* height: 200vh; */
+    height: 200vh;
 
 }
 
@@ -120,11 +124,11 @@ section{
     grid-template-rows: auto;
     align-items: stretch;
     outline: var(--outline-width) solid blue;
-    opacity: .7;
+    opacity: .8;
 }
 
 .card:nth-child(1) .card__content {
-    background: blue;
+    background: #5A5BE5;
 }
 
 .card:nth-child(2) .card__content {
@@ -132,7 +136,7 @@ section{
 }
 
 .card:nth-child(3) .card__content {
-    background: yellow;
+    background: #fdd81f;
 }
 
 .card:nth-child(4) .card__content {
