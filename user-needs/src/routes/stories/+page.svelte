@@ -1,3 +1,28 @@
+<header>
+    <div class="heading">
+        <a href="/stories">back</a>
+        <h1>All stories</h1>
+    </div>
+    <input type="text" placeholder="Search for stories">
+    <ul>
+        <li>
+            <details>
+                <summary>Animal</summary>Animal
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Season</summary>Summer
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Language</summary>English
+            </details>
+        </li>
+    </ul>
+</header>
+
 
 <main>
     <section>
@@ -41,7 +66,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+ul:nth-of-type(1){
+    display: flex;
+    width: 100%;
+}
+ul:nth-of-type(1) > li{
+    width: 100%;
+    list-style-type: none;
+}
+header{
+    position: relative;
+    z-index: 10;
+}
 main{
     /* background-color: purple; */
     /* pas aan per scherm grootte */
@@ -84,27 +124,27 @@ section{
 }
 
 .card:nth-child(1) .card__content {
-    background: red;
-}
-
-.card:nth-child(2) .card__content {
     background: blue;
 }
 
+.card:nth-child(2) .card__content {
+    background: pink;
+}
+
 .card:nth-child(3) .card__content {
-    background: green;
+    background: yellow;
 }
 
 .card:nth-child(4) .card__content {
-    background: orange;
+    background: lightgreen;
 }
 
 .card:nth-child(5) .card__content {
-    background: purple;
+    background: violet;
 }
 
 .card:nth-child(6) .card__content {
-    background: yellow;
+    background: turquoise;
 }
 
 
