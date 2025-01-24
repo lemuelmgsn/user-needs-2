@@ -113,25 +113,6 @@ details > summary{
     background-image: linear-gradient(#471871, #142151);
   }
 
-
-  @keyframes yayy{
-    from{
-        transform: translateX(-100vw);
-    }
-    to{
-        transform: translateX(100vw);
-    }
-  }
-  @keyframes yayy2{
-    from{
-        transform: translateX(100vw);
-    }
-    to{
-        transform: translateX(-100vw);
-    }
-  } 
-
-
 .nyan-1{
     height: 20rem;
     width: 20rem;
