@@ -137,13 +137,8 @@ details > summary{
     width: 20rem;
     position: fixed;
     top: 50%;
-    animation: yayy2 infinite;
-    animation-duration: 3s;
-    animation-delay: 2s;
-}
-.nyan-1 {
-  animation: scrollOut linear forwards;
-  animation-timeline: scroll();
+    animation: scrollOut linear forwards;
+    animation-timeline: scroll();
 }
 
 .nyan-2{
@@ -151,14 +146,8 @@ details > summary{
     width: 30rem;
     position: fixed;
     top: 10%;
-    animation: yayy2 infinite;
-    animation-duration: 3s;
-    animation-delay: 2s;
-    transform: rotateX(45deg);
-}
-.nyan-2 {
-  animation: scrollOut2 linear forwards;
-  animation-timeline: scroll();
+    animation: scrollOut2 linear forwards;
+    animation-timeline: scroll();
 }
 
 @keyframes scrollOut {
