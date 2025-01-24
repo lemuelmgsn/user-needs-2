@@ -50,7 +50,6 @@
   <style>
   
   :root {
-      /* --card-height: 40vw; */
       --card-margin: 4vw;
       --card-top-offset: 1em;
       background-image: linear-gradient(#471871, #142151);
@@ -62,82 +61,14 @@
       box-sizing: border-box;
   }
   
-  html, body {
-      max-width: 100%;
-      overflow-x: hidden; /* Verwijdert horizontale scrollbars */
-  }
   
-  /* Algemene styling */
-  header {
-      position: fixed;
-      z-index: 10;
-      width: 100%; /* Zorg ervoor dat de header de volledige breedte beslaat */
-      height: 10vh; /* Stel een consistente hoogte in */
-      background-color: white;
-  }
-  
-  main {
-      height: auto;
-      transform: translateY(15vh);
-  }
-  
-  section {
-      width: 100vw;
-      margin: 0 auto;
-  }
-  
-  /* Grid styling voor kaarten */
-  #cards {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(var(--numcards), var(--card-height));
-      gap: 5px; /* Verminder de ruimte tussen kaarten */
-      padding-bottom: calc(var(--numcards) * var(--card-top-offset));
-      margin-bottom: var(--card-margin);
-      view-timeline-name: --cards-element-scrolls-in-body; /* Voor animaties */
-      --numcards: 8; /* Aantal kaarten */
-  }
-  
-  .card {
-      position: sticky;
-      top: 0;
-      padding-top: calc(var(--index) * var(--card-top-offset));
-      height: var(--card-height);
-      will-change: transform;
-  }
-  
-  .card__content {
-      position: sticky;
-      background: rgb(255, 255, 255);
-      color: rgb(10, 5, 7);
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(3, auto);
-      padding: 10px;
-      align-items: start;
-      height: 5.3rem;
-      transform-origin: 50% 0%;
-      opacity: 0.8;
-      animation: linear scale forwards;
-      animation-timeline: --cards-element-scrolls-in-body;
-      --start-range: calc(var(--index0) / var(--numcards) * 100%);
-      --end-range: calc(var(--index) / var(--numcards) * 100%);
-      animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);    
-  }
-  
-  
-  /* Verklein en behoud structuur */
+  /* styling voor kaarten */
   .story-image img {
       max-width: 3.75em;
       min-height: 4em;
       object-fit: cover;
   }
   
-  /* Story elementen binnen een kaart */
   .story-image { grid-area: 1 / 1 / 4 / 2; }
   .story-title {
       font-size: 10px;
@@ -183,11 +114,9 @@
       white-space: nowrap;
   }
   
-  /* Flex items voor consistentie */
   .flex-items {
       display: flex;
       align-items: center;
-      /* gap: 8px; */
   }
   
   p {
@@ -198,7 +127,51 @@
       max-width: 1.1em;
   }
   
-  /* Animatie */
+  /* Scroll animatie */
+
+  /* Grid styling voor kaarten */
+  #cards {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(var(--numcards), var(--card-height));
+      gap: 5px; 
+      padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+      margin-bottom: var(--card-margin);
+      view-timeline-name: --cards-element-scrolls-in-body; 
+      --numcards: 8; 
+  }
+  
+  .card {
+      position: sticky;
+      top: 0;
+      padding-top: calc(var(--index) * var(--card-top-offset));
+      height: var(--card-height);
+      will-change: transform;
+  }
+  
+  .card__content {
+      position: sticky;
+      background: rgb(255, 255, 255);
+      color: rgb(10, 5, 7);
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, auto);
+      padding: 10px;
+      align-items: start;
+      height: 5.3rem;
+      transform-origin: 50% 0%;
+      opacity: 0.8;
+      animation: linear scale forwards;
+      animation-timeline: --cards-element-scrolls-in-body;
+      --start-range: calc(var(--index0) / var(--numcards) * 100%);
+      --end-range: calc(var(--index) / var(--numcards) * 100%);
+      animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);    
+  }
+
   /* Variabelen voor kaarten */
   @supports (animation-timeline: view()) {
       .card {
